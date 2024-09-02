@@ -1,0 +1,132 @@
+/* Sidebar styling */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  overflow-y: auto; /* Enables scrolling when content overflows vertically */
+  transition: width 0.3s ease; /* Smooth transition for width changes */
+}
+
+/* Logo and title styling */
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.logo-text {
+  margin-left: 10px;
+  font-size: 18px;
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+/* Sidebar navigation list */
+.sidebar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+}
+
+.sidebar-nav-item {
+  margin: 15px 0;
+}
+
+.sidebar-nav-link {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.sidebar-nav-link:hover {
+  background-color: #575757;
+}
+
+.sidebar-link-icon {
+  margin-right: 10px;
+  font-size: 20px;
+  min-width: 20px; /* Ensure icons stay aligned */
+  text-align: center; /* Center align icons */
+}
+
+.sidebar-link-text {
+  font-size: 16px;
+  transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition for showing/hiding text */
+}
+
+/* Active link styling */
+.active {
+  background-color: #007bff;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 60px; /* Narrow sidebar on small screens */
+  }
+
+  .logo-container {
+    justify-content: center; /* Center logo on small screens */
+  }
+
+  .logo-text {
+    display: none; /* Hide logo text */
+  }
+
+  .sidebar-nav-link {
+    padding: 10px 0; /* Adjust padding for narrower sidebar */
+    justify-content: center; /* Center icons when text is hidden */
+  }
+
+  .sidebar-link-icon {
+    margin-right: 0; /* Remove right margin on icons */
+  }
+
+  .sidebar-link-text {
+    opacity: 0; /* Hide text but keep space reserved */
+    visibility: hidden; /* Ensure text is fully hidden */
+    pointer-events: none; /* Disable interaction with hidden text */
+  }
+}
+
+/* Ensure sidebar is scrollable when content overflows */
+.sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: #555; /* Custom scrollbar color */
+  border-radius: 4px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: #333; /* Scrollbar track color */
+}

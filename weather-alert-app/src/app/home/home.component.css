@@ -1,0 +1,14 @@
+.container {
+    max-width: 600px;
+    margin: 30px auto;
+    text-align: center;
+  }
+  
+  .input-group {
+    margin-bottom: 20px;
+  }
+  
+  .weather-info {
+    margin-top: 20px;
+  }
+  

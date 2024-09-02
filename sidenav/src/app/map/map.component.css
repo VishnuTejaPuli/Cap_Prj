@@ -1,0 +1,59 @@
+/* Style for the main container */
+
+  
+  /* Style for the left sidebar */
+  .sidebar {
+    width: 250px; /* Adjust width as per your sidebar's size */
+    min-width: 200px; /* Minimum width to keep it responsive */
+    background-color: #fff; /* Optional: Sidebar background color */
+  }
+  
+  /* Style for the map container */
+
+  
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+    }
+    #map {
+      width: 100%;
+      height: calc(100vh - 150px); /* Adjust for a smaller height on mobile */
+    }
+  }
+
+
+  /* Container for the whole page */
+.page-container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh; /* Full height for the layout */
+  }
+  
+  /* Map component styling */
+  .map-container {
+    flex: 1; /* Use the remaining space */
+    display: flex;
+    justify-content: center; /* Center the map horizontally */
+    align-items: center; /* Center the map vertically */
+    padding: 16px;
+    box-sizing: border-box; /* Include padding in width/height calculations */
+    overflow: hidden; /* Hide any overflow */
+  }
+  
+  /* Map itself */
+  .map {
+    width: 100%; /* Full width of the container */
+    height: 80vh; /* Adjust height as needed */
+    max-width: 700px; /* Optional: max width constraint */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for a subtle lift */
+  }
+  
+  /* Marker positions (if markers are not correctly positioned, adjust these) */
+  .marker {
+    position: absolute;
+    transform: translate(-50%, -100%); /* Center markers above the exact location */
+  }
+  
+  

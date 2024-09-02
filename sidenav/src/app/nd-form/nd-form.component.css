@@ -1,0 +1,63 @@
+/* CSS for the Incident Reporting Form */
+.container {
+  max-width: 600px; /* Adjust width as needed */
+  margin: 20px auto; /* Center the form horizontally with some vertical margin */
+  padding: 20px; /* Add padding around the form */
+  background-color: #ffffff; /* White background for the form */
+  border-radius: 8px; /* Rounded corners for a modern look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+h1 {
+  font-size: 1.8em; /* Heading size */
+  color: #5cb8df; /* Accent color for the heading */
+  text-align: center; /* Center the heading text */
+  margin-bottom: 20px; /* Space below the heading */
+}
+
+.form-label {
+  font-weight: 600; /* Make the labels bold for emphasis */
+  color: #333; /* Dark color for contrast */
+}
+
+.form-control {
+  border: 1px solid #ddd; /* Light border for the input fields */
+  border-radius: 4px; /* Rounded corners for input fields */
+  padding: 10px; /* Padding inside the input fields */
+  font-size: 1em; /* Font size for input text */
+  margin-bottom: 15px; /* Space below each input field */
+}
+
+.form-control:focus {
+  border-color: #007bff; /* Blue border on focus */
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.2); /* Shadow on focus for accessibility */
+}
+
+.btn-primary {
+  background-color: #4777824e; /* Button primary color */
+  border-color: #45c9d5; /* Button border color */
+  padding: 10px 20px; /* Padding for the button */
+  font-size: 1em; /* Font size for the button text */
+  border-radius: 4px; /* Rounded button corners */
+  width: 100%; /* Make the button full-width for better accessibility */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.btn-primary:hover {
+  background-color: #45a4c4; /* Darker blue on hover */
+  border-color: #0056b3; /* Darker border on hover */
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 15px; /* Reduce padding on smaller screens */
+  }
+
+  h1 {
+    font-size: 1.5em; /* Adjust heading size for smaller screens */
+  }
+
+  .btn-primary {
+    font-size: 0.9em; /* Slightly smaller button text on small screens */
+  }
+}

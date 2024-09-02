@@ -1,0 +1,19 @@
+
+.map-container {
+    flex: 1; /* Use the remaining space */
+    display: flex;
+    justify-content: center; /* Center the map horizontally */
+    align-items: center; /* Center the map vertically */
+    padding: 16px;
+    box-sizing: border-box; /* Include padding in width/height calculations */
+    overflow: hidden; /* Hide any overflow */
+  }
+  
+  /* Map itself */
+  .map {
+    width: 100%; /* Full width of the container */
+    height: 80vh; /* Adjust height as needed */
+    max-width: 700px; /* Optional: max width constraint */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for a subtle lift */
+  }

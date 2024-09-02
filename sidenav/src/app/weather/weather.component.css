@@ -1,0 +1,81 @@
+.weather1 {
+    flex: 1 1 35%;
+    padding: 20px;
+    box-sizing: border-box;
+    background: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#divWeatherMain {
+    display: flex;
+    flex-direction: coloumn;
+    /* flex-direction: row; */
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* #divWeatherMain {
+    display: block;
+    border-radius: 10px;
+    width: 220px;
+    height: 200px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+} */
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .content, .weather1 {
+        flex: 1 1 100%;
+    }
+}
+
+@keyframes cloudMovement{
+    from{margin-left: -55px;}
+    to{margin-left: 65px;}
+}
+
+
+
+.day-background {
+    background: rgb(255, 255, 255); /* White background for day */
+    color: black; /* Change text color to black for better contrast */
+}
+
+.night-background {
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(8,7,42,1) 75%, rgb(8, 10, 63) 100%);
+    color: white;
+}
+
+.weatherWidgetRow{
+    display:block;
+    margin:0 auto;
+    width: fit-content;
+    height: fit-content;
+}
+
+.sun{
+    margin-top: 10px;
+    color: yellow;
+    filter: drop-shadow( 1px 1px 10px yellow);
+}
+
+.moon{
+    margin-top: 10px;
+    color: white;
+    filter: drop-shadow( 1px 1px 10px white);
+}
+
+.cloudDiv{
+    margin-top: -40px;
+}
+
+.cloud{
+    color: rgb(104, 175, 197);
+    filter: drop-shadow( 1px 1px 5px rgb(104, 175, 197));
+    animation-name: cloudMovement;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}

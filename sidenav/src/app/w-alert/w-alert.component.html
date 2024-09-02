@@ -1,0 +1,33 @@
+<div class="container">
+    <h1>Weather Alerts</h1>
+    
+    <!-- Input for City Name -->
+    <div class="input-group mb-3">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Enter City Name"
+        [(ngModel)]="city"
+      />
+      <button class="btn btn-primary" (click)="onCitySubmit()">Get Weather Alerts</button>
+    </div>
+  
+    <!-- Display Weather Alerts -->
+    <div *ngIf="weatherAlerts.length > 0; else noAlerts">
+      <div *ngFor="let alert of weatherAlerts" class="alert alert-danger">
+        {{ alert }}
+      </div>
+    </div>
+    <ng-template #noAlerts>
+      <p>No weather alerts at the moment.</p>
+    </ng-template>
+  
+    <!-- Display Weather Information -->
+    <div class="weather-info" *ngIf="weatherData">
+      <h2>Weather in {{ weatherData.name }}</h2>
+      <p>Temperature: {{ weatherData.main.temp }}°C</p>
+      <p>Condition: {{ weatherData.weather[0].description }}</p>
+      <p>Humidity: {{ weatherData.main.humidity }}%</p>
+    </div>
+  </div>
+  

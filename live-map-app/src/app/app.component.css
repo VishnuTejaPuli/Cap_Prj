@@ -1,0 +1,13 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.container{
+    width: 50vw;
+    height: 100vh;
+    margin-right: 5%;
+
+    /* align-content: center; */
+    justify-content: flex-end;
+}
